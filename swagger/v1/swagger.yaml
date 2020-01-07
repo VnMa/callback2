@@ -1,0 +1,36 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/callbacks":
+    post:
+      summary: Create new callback
+      tags:
+      - callback create
+      consumes:
+      - application/json
+      - applssication/xml
+      parameters:
+      - notify_url: http://example.com
+      responses:
+        '201':
+          description: callback created
+        '422':
+          description: invalid request
+      produces:
+      - application/json
+      - application/xml
+    get:
+      summary: List all callbacks
+      tags:
+      - callback list
+      consumes:
+      - application/json
+      - application/xml
+      responses:
+        '201':
+          description: callback created
+        '422':
+          description: invalid request
